@@ -1,11 +1,11 @@
 import MainHeader from "./components/MainHeader"
-
+import MainContent from "./components/MainContent"
 
 function App() {
     return (
         <>
-            <h1>Ciao sono la tua prima App React</h1>
             <MainHeader />
+            <MainContent />
         </>
     )
 }

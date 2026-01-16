@@ -66,3 +66,11 @@ ul li a.active,
 ul li a:hover {
     background: lightblue;
 }
+
+/* regole Main */
+main {
+    background-image: url('./assets/img/background.jpg');
+    text-align: center;
+    padding: 4rem 1rem;
+    margin: 4rem 0;
+}

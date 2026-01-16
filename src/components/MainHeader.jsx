@@ -1,7 +1,3 @@
-
-const title = "Ciao sono un titolo dinamico dell'Header!!";
-
-
 const MainHeader = () => {
     return (
         <header>
