@@ -1,11 +1,11 @@
+import MainLogo from "./MainLogo"
+
 const MainFooter = () => {
     return (
         <footer>
             <nav className="footer-nav">
                 <div className="footer-col">
-                    <figure>
-                        <img src="/logo.png" alt="La Molisana" />
-                    </figure>
+                    <MainLogo />
                 </div>
                 <div className="footer-col">
                     <div>

@@ -1,9 +1,9 @@
+import MainLogo from "./MainLogo"
+
 const MainHeader = () => {
     return (
         <header>
-            <figure>
-                <img src="/logo.png" alt="Logo" />
-            </figure>
+            <MainLogo />
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
