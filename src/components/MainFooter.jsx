@@ -43,11 +43,11 @@ const MainFooter = () => {
                     <div>
                         <h4>Prodotti</h4>
                         <ul>
-                            <li><a href="#">Le classiche</a></li>
-                            <li><a href="#">Le Integrali</a></li>
-                            <li><a href="#">Le Speciali</a></li>
-                            <li><a href="#">Le Biologiche</a></li>
-                            <li><a href="#">Le Gluten-free</a></li>
+                            {productsLinks.map((prosductlink, index) => {
+                                return (<li key={index}>
+                                    <a href={prosductlink.href}>{prosductlink.label}</a>
+                                </li>)
+                            })}
                         </ul>
                     </div>
                 </div>
