@@ -8,7 +8,7 @@ const Navbar = () => {
         { id: 4, text: 'Contatti', url: '#', current: false },
     ];
 
-    // funzione rendering links
+    // rendering links array ritornato dal map
     const linkListRender = links.map((link) => {
         return (
             <li key={link.id}>
