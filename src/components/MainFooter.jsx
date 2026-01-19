@@ -20,6 +20,15 @@ const MainFooter = () => {
         { label: "Le Gluten-free", href: "#" },
     ];
 
+    // funzione di rendereing link
+    function renderProdotti(arrayLink) {
+        return arrayLink.map((elementLink, index) => {
+            return (<li key={index}>
+                <a href={elementLink.href}>{elementLink.label}</a>
+            </li>)
+        })
+    }
+
 
     return (
         <footer>
@@ -31,11 +40,7 @@ const MainFooter = () => {
                     <div>
                         <h4>Pastificio</h4>
                         <ul>
-                            {pastificioLinks.map((pastaLink, index) => {
-                                return (<li key={index}>
-                                    <a href={pastaLink.href}>{pastaLink.label}</a>
-                                </li>)
-                            })}
+                            {renderProdotti(pastificioLinks)}
                         </ul>
                     </div>
                 </div>
@@ -43,11 +48,7 @@ const MainFooter = () => {
                     <div>
                         <h4>Prodotti</h4>
                         <ul>
-                            {productsLinks.map((prosductlink, index) => {
-                                return (<li key={index}>
-                                    <a href={prosductlink.href}>{prosductlink.label}</a>
-                                </li>)
-                            })}
+                            {renderProdotti(productsLinks)}
                         </ul>
                     </div>
                 </div>
