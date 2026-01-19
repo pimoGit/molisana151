@@ -4,20 +4,27 @@ const MainFooter = () => {
 
 
     // dati delle voci di menù estese del footer
-    const pastificioLinks = [
-        { label: "Il Pastificio", href: "#" },
-        { label: "Grano", href: "#" },
-        { label: "Filiera", href: "#" },
-        { label: "100 anni di pasta", href: "#" },
-        { label: "Sartoria della pasta", href: "#" },
-    ];
-
-    const productsLinks = [
-        { label: "Le classiche", href: "#" },
-        { label: "Le Integrali", href: "#" },
-        { label: "Le Speciali", href: "#" },
-        { label: "Le Biologiche", href: "#" },
-        { label: "Le Gluten-free", href: "#" },
+    const footerSections = [
+        {
+            title: "Pastificio",
+            links: [
+                { label: "Il Pastificio", href: "#" },
+                { label: "Grano", href: "#" },
+                { label: "Filiera", href: "#" },
+                { label: "100 anni di pasta", href: "#" },
+                { label: "Sartoria della pasta", href: "#" },
+            ],
+        },
+        {
+            title: "Prodotti",
+            links: [
+                { label: "Le classiche", href: "#" },
+                { label: "Le Integrali", href: "#" },
+                { label: "Le Speciali", href: "#" },
+                { label: "Le Biologiche", href: "#" },
+                { label: "Le Gluten-free", href: "#" },
+            ],
+        },
     ];
 
     // funzione di rendereing link
@@ -36,22 +43,18 @@ const MainFooter = () => {
                 <div className="footer-col">
                     <MainLogo />
                 </div>
-                <div className="footer-col">
-                    <div>
-                        <h4>Pastificio</h4>
-                        <ul>
-                            {renderProdotti(pastificioLinks)}
-                        </ul>
+                {footerSections.map((footerSec, indice) => (
+                    <div className="footer-col" key={indice}>
+                        <div>
+                            <h4>{footerSec.title}</h4>
+                            <ul>
+                                {renderProdotti(footerSec.links)}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="footer-col">
-                    <div>
-                        <h4>Prodotti</h4>
-                        <ul>
-                            {renderProdotti(productsLinks)}
-                        </ul>
-                    </div>
-                </div>
+                ))
+
+                }
             </nav>
         </footer>
     )
