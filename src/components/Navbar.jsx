@@ -8,28 +8,22 @@ const Navbar = () => {
         { id: 4, text: 'Contatti', url: '#', current: false },
     ];
 
+    // funzione rendering links
+    const linkListRender = links.map((link) => {
+        return (
+            <li key={link.id}>
+                <a href={link.url}
+                    className={link.current ? 'active' : ''}>
+                    {link.text}
+                </a>
+            </li>
+        )
+    });
 
     return (
         <nav>
             <ul>
-                {links.map((link) => {
-                    return (
-                        <li key={link.id}>
-                            <a href={link.url}
-                                className={link.current ? 'active' : ''}>
-                                {link.text}
-                            </a>
-                        </li>
-                    )
-                })
-
-                }
-
-
-                {/* <li><a href="#">Home</a></li>
-                <li><a href="#" className="active">Prodotti</a></li>
-                <li><a href="#">Chi Siamo</a></li>
-                <li><a href="#">Contatti</a></li> */}
+                {linkListRender}
             </ul>
         </nav>
     )
