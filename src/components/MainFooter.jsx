@@ -1,6 +1,26 @@
 import MainLogo from "./MainLogo"
 
 const MainFooter = () => {
+
+
+    // dati delle voci di menù estese del footer
+    const pastificioLinks = [
+        { label: "Il Pastificio", href: "#" },
+        { label: "Grano", href: "#" },
+        { label: "Filiera", href: "#" },
+        { label: "100 anni di pasta", href: "#" },
+        { label: "Sartoria della pasta", href: "#" },
+    ];
+
+    const productsLinks = [
+        { label: "Le classiche", href: "#" },
+        { label: "Le Integrali", href: "#" },
+        { label: "Le Speciali", href: "#" },
+        { label: "Le Biologiche", href: "#" },
+        { label: "Le Gluten-free", href: "#" },
+    ];
+
+
     return (
         <footer>
             <nav className="footer-nav">
@@ -11,11 +31,11 @@ const MainFooter = () => {
                     <div>
                         <h4>Pastificio</h4>
                         <ul>
-                            <li><a href="#">Il Pastificio</a></li>
-                            <li><a href="#">Grano</a></li>
-                            <li><a href="#">Filiera</a></li>
-                            <li><a href="#">100 anni di pasta</a></li>
-                            <li><a href="#">Sartoria della pasta</a></li>
+                            {pastificioLinks.map((pastaLink, index) => {
+                                return (<li key={index}>
+                                    <a href={pastaLink.href}>{pastaLink.label}</a>
+                                </li>)
+                            })}
                         </ul>
                     </div>
                 </div>
