@@ -88,6 +88,15 @@ const ProductList = () => {
         },
     ];
 
+    // funzione di rendering prodotti
+    const renderProdottiCard = () => {
+        return products.map((product) => (
+            <div className="prod-card" key={product.id}>
+                <img src={product.src} alt={product.title} />
+                <h3>{product.title}</h3>
+            </div>
+        ))
+    }
 
 
     return (
@@ -96,15 +105,7 @@ const ProductList = () => {
 
             <div className="container card-container">
 
-                {products.map((product) => (
-                    <div className="prod-card" key={product.id}>
-                        <img src={product.src} alt={product.title} />
-                        <h3>{product.title}</h3>
-                    </div>
-
-                ))
-
-                }
+                {renderProdottiCard()}
 
 
             </div>
