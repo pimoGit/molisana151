@@ -97,8 +97,7 @@ const ProductList = () => {
     const renderProdottiCard = () => {
         return products.map((product) => (
             <ProductCard key={product.id}
-                src={product.src}
-                title={product.title}
+                product={product}
             />
         ))
     }

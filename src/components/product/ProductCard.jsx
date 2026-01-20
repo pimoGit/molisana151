@@ -1,7 +1,7 @@
 const ProductCard = (props) => {
 
     // destructuring
-    const { src, title } = props;
+    const { src, title } = props.product;
 
     return (
         <div className="prod-card">
@@ -12,3 +12,11 @@ const ProductCard = (props) => {
 }
 
 export default ProductCard
+
+// const props = {
+//     productObj: {
+//         title: "valore del titolo passato";
+//         src: "valore di src passato dalla props"
+//     }
+
+// }
