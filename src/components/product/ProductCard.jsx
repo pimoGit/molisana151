@@ -14,7 +14,7 @@ const ProductCard = (props) => {
 export default ProductCard
 
 // const props = {
-//     productObj: {
+//     product: {
 //         title: "valore del titolo passato";
 //         src: "valore di src passato dalla props"
 //     }
