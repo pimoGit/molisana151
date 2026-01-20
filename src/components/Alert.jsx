@@ -1,12 +1,12 @@
 const Alert = (props) => {
 
     // descructuting oggetto props
-    const { type, message } = props;
+    const { type, children } = props;
 
     return (
         <div className="alert-container">
             <div className={`alert ${type || 'info'}`}>
-                {message}
+                {children}
             </div>
         </div>
     )

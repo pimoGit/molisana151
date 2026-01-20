@@ -69,6 +69,14 @@ a {
     }
 }
 
+.alert ul {
+    display: block;
+}
+
+.alert ul li {
+    list-style-type: circle;
+}
+
 
 
 

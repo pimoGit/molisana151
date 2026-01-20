@@ -7,9 +7,13 @@ function App() {
     return (
         <>
             <MainHeader />
-            <Alert
-                type=""
-                message="Questa è una info generica" />
+            <Alert type="succes">
+                <ul>
+                    <li>hai sbagliato questo</li>
+                    <li>ma anche questo</li>
+                    <li>per non parlare di questo</li>
+                </ul>
+            </Alert>
             <MainContent />
             <MainFooter />
         </>
