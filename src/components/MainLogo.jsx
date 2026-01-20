@@ -7,7 +7,7 @@ const MainLogo = ({ slogan }) => {
     return (
         <figure>
             <img src="/logo.png" alt={slogan} />
-            <p>{slogan}</p>
+            <p>{slogan || "slogan di default"}</p>
         </figure>
     )
 }
