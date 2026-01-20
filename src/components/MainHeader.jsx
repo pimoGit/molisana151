@@ -4,7 +4,7 @@ import Navbar from "./Navbar"
 const MainHeader = () => {
     return (
         <header>
-            <MainLogo />
+            <MainLogo slogan="La pasta sana!" />
             <Navbar />
         </header>
     )

@@ -41,7 +41,7 @@ const MainFooter = () => {
         <footer>
             <nav className="footer-nav">
                 <div className="footer-col">
-                    <MainLogo />
+                    <MainLogo slogan="La pasta più buona del mondo!" />
                 </div>
                 {footerSections.map((footerSec, indice) => (
                     <div className="footer-col" key={indice}>
