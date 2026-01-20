@@ -1,4 +1,4 @@
-import ProductList from "./ProductList"
+import ProductList from "./product/ProductList"
 
 const MainContent = () => {
     return (

@@ -1,3 +1,7 @@
+import ProductCard from "./ProductCard";
+
+
+
 const ProductList = () => {
 
     // dati dei prodotti
@@ -88,13 +92,14 @@ const ProductList = () => {
         },
     ];
 
+
     // funzione di rendering prodotti
     const renderProdottiCard = () => {
         return products.map((product) => (
-            <div className="prod-card" key={product.id}>
-                <img src={product.src} alt={product.title} />
-                <h3>{product.title}</h3>
-            </div>
+            <ProductCard key={product.id}
+                src={product.src}
+                title={product.title}
+            />
         ))
     }
 
@@ -106,7 +111,6 @@ const ProductList = () => {
             <div className="container card-container">
 
                 {renderProdottiCard()}
-
 
             </div>
 
