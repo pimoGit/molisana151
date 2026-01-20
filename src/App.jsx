@@ -7,7 +7,7 @@ function App() {
     return (
         <>
             <MainHeader />
-            <Alert type="succes">
+            <Alert type="error">
                 <ul>
                     <li>hai sbagliato questo</li>
                     <li>ma anche questo</li>
