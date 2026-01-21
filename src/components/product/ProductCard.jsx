@@ -3,9 +3,14 @@ const ProductCard = (props) => {
     // destructuring
     const { src, title } = props.product;
 
+    // funzione di esempio
+    const sayHello = () => {
+        alert("ciao");
+    }
+
     return (
         <div className="prod-card">
-            <img src={src} alt={title} />
+            <img onClick={sayHello} src={src} alt={title} />
             <h3>{title}</h3>
         </div>
     )
